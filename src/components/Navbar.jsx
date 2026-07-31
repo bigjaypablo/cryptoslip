@@ -16,6 +16,7 @@ export default function Navbar() {
     { label: "Features", to: "/features" },
     { label: "How it works", to: "/#how-it-works" },
     { label: "Pricing", to: "/pricing" },
+    { label: "About", to: "/about" },
   ];
 
   return (
