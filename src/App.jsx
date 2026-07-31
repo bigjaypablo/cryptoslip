@@ -1,31 +1,22 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import Perforation from "./components/Perforation";
-import Problem from "./components/Problem";
-import HowItWorks from "./components/HowItWorks";
-import Features from "./components/Features";
-import WalletFlow from "./components/WalletFlow";
-import FeeSection from "./components/FeeSection";
-import UseCases from "./components/UseCases";
-import FAQ from "./components/FAQ";
-import FinalCTA from "./components/FinalCTA";
 import Footer from "./components/Footer";
+import Home from "./pages/Home";
+import FeaturesPage from "./pages/FeaturesPage";
+import PricingPage from "./pages/PricingPage";
 
 export default function App() {
   return (
-    <div className="min-h-screen">
-      <Navbar />
-      <Hero />
-      <Perforation />
-      <Problem />
-      <HowItWorks />
-      <Features />
-      <WalletFlow />
-      <FeeSection />
-      <UseCases />
-      <FAQ />
-      <FinalCTA />
-      <Footer />
-    </div>
+    <BrowserRouter>
+      <div className="min-h-screen">
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/features" element={<FeaturesPage />} />
+          <Route path="/pricing" element={<PricingPage />} />
+        </Routes>
+        <Footer />
+      </div>
+    </BrowserRouter>
   );
 }

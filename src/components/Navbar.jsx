@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 
 export default function Navbar() {
@@ -12,9 +13,9 @@ export default function Navbar() {
   }, []);
 
   const links = [
-    { label: "How it works", href: "#how-it-works" },
-    { label: "Features", href: "#features" },
-    { label: "Fees", href: "#fees" },
+    { label: "Features", to: "/features" },
+    { label: "How it works", to: "/#how-it-works" },
+    { label: "Pricing", to: "/pricing" },
   ];
 
   return (
@@ -25,21 +26,21 @@ export default function Navbar() {
       style={{ background: scrolled ? "rgba(250,249,246,0.95)" : "transparent" }}
     >
       <nav className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
-        <a href="#top" className="flex items-center gap-2 cs-focus" aria-label="Crypto Slip home">
+        <Link to="/" className="flex items-center gap-2 cs-focus" aria-label="Crypto Slip home">
           <span className="cs-serif text-xl font-medium tracking-tight" style={{ color: "var(--ink)" }}>
             Crypto Slip
           </span>
-        </a>
+        </Link>
 
         <div className="hidden md:flex items-center gap-8">
           {links.map((l) => (
-            <a
-              key={l.href}
-              href={l.href}
+            <Link
+              key={l.to}
+              to={l.to}
               className="text-sm text-[var(--ink-soft)] hover:text-[var(--ink)] transition-colors cs-focus"
             >
               {l.label}
-            </a>
+            </Link>
           ))}
         </div>
 
@@ -50,13 +51,13 @@ export default function Navbar() {
           >
             Sign in
           </a>
-          <a
-            href="#create"
+          <Link
+            to="/#create"
             className="text-sm font-medium text-[var(--paper)] px-4 py-2.5 rounded-sm transition-transform hover:-translate-y-0.5 cs-focus"
             style={{ background: "var(--sage-bright)" }}
           >
             Create an invoice
-          </a>
+          </Link>
         </div>
 
         <button
@@ -72,27 +73,27 @@ export default function Navbar() {
       {open && (
         <div className="md:hidden border-t border-[var(--line)] bg-[var(--paper)] px-6 py-5 flex flex-col gap-4">
           {links.map((l) => (
-            <a
-              key={l.href}
-              href={l.href}
+            <Link
+              key={l.to}
+              to={l.to}
               onClick={() => setOpen(false)}
               className="text-base text-[var(--ink-soft)] cs-focus py-1"
             >
               {l.label}
-            </a>
+            </Link>
           ))}
           <div className="h-px bg-[var(--line)] my-1" />
           <a href="#signin" onClick={() => setOpen(false)} className="text-base text-[var(--ink-soft)] cs-focus py-1">
             Sign in
           </a>
-          <a
-            href="#create"
+          <Link
+            to="/#create"
             onClick={() => setOpen(false)}
             className="text-base font-medium text-center text-[var(--paper)] px-4 py-3 rounded-sm cs-focus"
             style={{ background: "var(--sage-bright)" }}
           >
             Create an invoice
-          </a>
+          </Link>
         </div>
       )}
     </header>
