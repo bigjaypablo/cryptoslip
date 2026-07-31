@@ -1,0 +1,30 @@
+@import "tailwindcss";
+
+.cs-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 3px;
+  background: var(--line);
+  border-radius: 2px;
+  outline: none;
+}
+.cs-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--sage-bright);
+  cursor: pointer;
+  border: 3px solid var(--paper);
+  box-shadow: 0 1px 4px rgba(18,21,28,0.25);
+}
+.cs-slider::-moz-range-thumb {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--sage-bright);
+  cursor: pointer;
+  border: 3px solid var(--paper);
+  box-shadow: 0 1px 4px rgba(18,21,28,0.25);
+}
