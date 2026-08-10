@@ -15,7 +15,7 @@ export default function FinalCTA() {
         <div className="mt-10 flex flex-col sm:flex-row gap-3 justify-center">
           <a
             href="#top"
-            className="inline-flex items-center justify-center gap-2 font-medium px-7 py-3.5 rounded-sm transition-transform hover:-translate-y-0.5 cs-focus"
+            className="cs-btn-refined inline-flex items-center justify-center gap-2 font-medium px-7 py-3.5 rounded-sm hover:-translate-y-0.5 cs-focus"
             style={{ backgroundColor: "#E4D5AE", color: "#12151C" }}
           >
             Create your first invoice

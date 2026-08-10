@@ -46,12 +46,12 @@ export default function Navbar() {
         </div>
 
         <div className="hidden md:flex items-center gap-3">
-          <a
-            href="#signin"
+          <Link
+            to="/login"
             className="text-sm text-[var(--ink-soft)] hover:text-[var(--ink)] transition-colors px-3 py-2 cs-focus"
           >
             Sign in
-          </a>
+          </Link>
           <Link
             to="/#create"
             className="text-sm font-medium text-[var(--paper)] px-4 py-2.5 rounded-sm transition-transform hover:-translate-y-0.5 cs-focus"
@@ -84,9 +84,9 @@ export default function Navbar() {
             </Link>
           ))}
           <div className="h-px bg-[var(--line)] my-1" />
-          <a href="#signin" onClick={() => setOpen(false)} className="text-base text-[var(--ink-soft)] cs-focus py-1">
+          <Link to="/login" onClick={() => setOpen(false)} className="text-base text-[var(--ink-soft)] cs-focus py-1">
             Sign in
-          </a>
+          </Link>
           <Link
             to="/#create"
             onClick={() => setOpen(false)}

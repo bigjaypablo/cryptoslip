@@ -27,7 +27,7 @@ export default function Hero() {
             <div className="mt-9 flex flex-col sm:flex-row gap-3">
               <a
                 href="#create"
-                className="group inline-flex items-center justify-center gap-2 text-[var(--paper)] font-medium px-6 py-3.5 rounded-sm transition-transform hover:-translate-y-0.5 cs-focus"
+                className="cs-btn-refined group inline-flex items-center justify-center gap-2 text-[var(--paper)] font-medium px-6 py-3.5 rounded-sm hover:-translate-y-0.5 cs-focus"
                 style={{ background: "var(--ink)" }}
               >
                 Create your first invoice
